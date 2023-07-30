@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Intro</title>
+</head>
+<body>
+    <h1 id="message">andhu</h1>
+    <script>
+         let message=document.getElementById("message")
+         message.innerHTML="Hello this my website"
+         let arr=[5,8,10,7,9,11]
+         arr.splice(3,3,17,19,111)
+         console.log(arr)
+         arr.splice(0,0,100)
+         console.log(arr)
+         arr.splice(arr.length-1,0,200)
+         
+         arr.splice(arr.length,0,1000)
+         arr.splice(arr.length/2,0,0)
+
+         console.log(arr)
+         </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EB Bill Calculator</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>EB Bill Calculator</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter the Units">
+        </div>
+        <div>
+            <button type="submit" onclick="calculator()">CALCULATE</button>
+        </div>
+        <div id="result" >
+
+        </div>
+    </div>
+    <script>
+
+
+        function calculator(){
+            
+            let units=Number(document.getElementById("input").value)
+            let result=0
+            let r=document.getElementById("result")
+            if(units<=50){
+                result=units*0.75
+                r.innerHTML= `You Should Pay Rs. 0.75/unit 
+                so you should pay `+result
+            }
+            else if (units>50 && units<=150){
+                result=units*1
+                r.innerHTML= "You Should Pay Rs. 1/unit"
+                // res.innerHTML("You Should Pay Rs. 1/unit")
+
+            }
+            else if(units>150 && units<=250){
+                result=units*1.3
+                r.innerHTML= "You Should Pay Rs. 1.3/unit"
+                // res.innerHTML("You Should Pay Rs. 1.3/unit")
+
+            }
+            else{
+                result=units*1.5
+                r.innerHTML= "You Should Pay Rs. 1.5/unit"+result
+                //res.innerHTML="You Should Pay Rs. 1.5/unit")
+            }
+            
+            //r.innerHTML= "You should pay Rs."+result
+
+            
+        }
+        
+    </script>
+
+    
+</body>
+</html>
